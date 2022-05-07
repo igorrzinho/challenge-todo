@@ -35,3 +35,17 @@ body.dark {
 .dark .completed {
   color: #64677e;
 }
+
+@media screen and (max-width: 376px) {
+  .dark .bg-topo {
+    background: url(./images/bg-mobile-dark.jpg);
+  }
+  .dark .task-filter {
+    background: #25273c;
+    color: #64677e;
+  }
+
+  .dark .task-clear {
+    border-bottom: 1px solid #64677e;
+  }
+}

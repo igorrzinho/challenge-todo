@@ -5,6 +5,7 @@ import Check from "./images/icon-check.svg";
 import Cross from "./images/icon-cross.svg";
 import "./App.css";
 import "./dark.css";
+
 const getLocalItems = () => {
   let list = localStorage.getItem("list");
 
@@ -32,7 +33,7 @@ function App() {
   const [task, setTask] = useState();
   const [items, setItems] = useState(0);
   const [filter, setfilter] = useState("all");
-
+  var lg = window.screen.width;
   const mode = () => {
     const body = document.querySelector("body");
     if (body.className === "") {
@@ -166,6 +167,43 @@ function App() {
         <div className="task-clear">
           <p>{items || "0"} items left</p>
 
+          {lg > 375 ? (
+            <div className="task-filter">
+              <p
+                onClick={() => handleFilter("all")}
+                className={filter == "all" ? "active" : ""}
+                style={{ cursor: "pointer" }}
+              >
+                All
+              </p>
+              <p
+                onClick={() => handleFilter("uncompleted")}
+                className={filter == "uncompleted" ? "active" : ""}
+                style={{ cursor: "pointer" }}
+              >
+                Active
+              </p>
+              <p
+                onClick={() => handleFilter("completed")}
+                className={filter == "completed" ? "active" : ""}
+                style={{ cursor: "pointer" }}
+              >
+                Completed
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          <p
+            onClick={() => handleDeleteAll()}
+            style={{
+              cursor: "pointer",
+            }}
+          >
+            clear completed
+          </p>
+        </div>
+        {lg <= 375 ? (
           <div className="task-filter">
             <p
               onClick={() => handleFilter("all")}
@@ -189,15 +227,9 @@ function App() {
               Completed
             </p>
           </div>
-          <p
-            onClick={() => handleDeleteAll()}
-            style={{
-              cursor: "pointer",
-            }}
-          >
-            clear completed
-          </p>
-        </div>
+        ) : (
+          ""
+        )}
       </div>
     </>
   );

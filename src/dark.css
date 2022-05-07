@@ -1,0 +1,37 @@
+body.dark {
+  background: #161620;
+}
+
+.dark .bg-topo {
+  background-image: url(./images/bg-desktop-dark.jpg);
+}
+
+.dark .input-box {
+  background: #25273c;
+}
+.input::-webkit-input-placeholder {
+  color: #ababab;
+}
+
+.dark .circle {
+  border: 1px solid #383a4f;
+}
+
+.dark .task {
+  background: #25273c;
+  color: #ababab;
+  border-bottom: 1px solid #383a4f;
+}
+
+.dark .task-clear {
+  background: #25273c;
+  color: #64677e;
+}
+
+.dark .active {
+  color: #4a78d8;
+}
+
+.dark .completed {
+  color: #64677e;
+}

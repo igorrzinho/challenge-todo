@@ -1,3 +1,6 @@
+# Desafio To do List
+essa lista de tarefas foi um desafio do front-end mentor que tem dois temas e grava as informações no localstorage.
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -4,7 +4,7 @@
 <p>essa lista de tarefas foi um desafio do front-end mentor que tem dois temas e grava as informações no localstorage.</p>
 <p>siga as intruções para instalar na sua maquina.</p>
 
----
+## 
 
 <br>
 
